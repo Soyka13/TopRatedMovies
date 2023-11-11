@@ -38,7 +38,7 @@ class MovieListViewController: UIViewController {
         setupSearchBar()
         setupTableView()
         setupRefreshControl()
-        setupBinding()
+        setupViewModelBinding()
     }
     
     private func setupSearchBar() {
@@ -54,14 +54,10 @@ class MovieListViewController: UIViewController {
     
     private func setupRefreshControl() {
         tableView.refreshControl = UIRefreshControl()
-//        tableView.refreshControl?.addAction(UIAction(handler: { [weak self] _ in
-//            self?.viewModel.fetchTopRatedMovies()
-//        }), for: .valueChanged)
-        
         tableView.refreshControl?.addTarget(self, action: #selector(refresh), for: .valueChanged)
     }
     
-    private func setupBinding() {
+    private func setupViewModelBinding() {
         viewModel.viewDelegate = self
     }
     
@@ -103,6 +99,14 @@ extension MovieListViewController: MovieListViewModelViewDelegate {
 
 extension MovieListViewController: UISearchBarDelegate {
     
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        guard !searchText.isEmpty else {
+            viewModel.fetchTopRatedMovies()
+            return
+        }
+        
+        viewModel.searchMovies(with: searchText)
+    }
 }
 
 // MARK: - UITableViewDelegate

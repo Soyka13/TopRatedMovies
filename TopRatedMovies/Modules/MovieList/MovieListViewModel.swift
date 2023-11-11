@@ -14,6 +14,7 @@ protocol MovieListViewModelProtocol: AnyObject {
     var viewState: ListViewState<MovieItem> { get }
     
     func fetchTopRatedMovies()
+    func searchMovies(with query: String)
 }
 
 protocol MovieListViewModelViewDelegate: AnyObject {
@@ -29,12 +30,14 @@ final class MovieListViewModel: MovieListViewModelProtocol {
             viewDelegate?.viewStateDidChange(viewState)
         }
     }
-     
+    
     var movieCells: [MovieCellViewModel] {
         viewState.currentEntities.compactMap { MovieCellViewModel($0) }
     }
     
     private let movieUseCase: MovieUseCaseProtocol
+    
+    private var searchWorkItem: DispatchWorkItem?
     
     init(movieUseCase: MovieUseCaseProtocol) {
         self.movieUseCase = movieUseCase
@@ -44,7 +47,7 @@ final class MovieListViewModel: MovieListViewModelProtocol {
         movieUseCase.getTopRatedMovies(page: 1) { [weak self] result in
             switch result {
             case .success(let movieResult):
-
+                
                 if movieResult.results.isEmpty {
                     self?.viewState = .empty
                 } else {
@@ -56,7 +59,27 @@ final class MovieListViewModel: MovieListViewModelProtocol {
         }
     }
     
-    func searchMovies() {
-        // movieUseCase.searchMovies
+    func searchMovies(with query: String) {
+        searchWorkItem?.cancel()
+        
+        let currentWorkItem = DispatchWorkItem {
+            self.movieUseCase.search(query: query, page: 1) { [weak self] result in
+                switch result {
+                case .success(let movieResult):
+                    
+                    if movieResult.results.isEmpty {
+                        self?.viewState = .empty
+                    } else {
+                        self?.viewState = .populated(movieResult.results.map(MovieItem.init))
+                    }
+                case .failure(let error):
+                    self?.viewState = .error(error)
+                }
+            }
+        }
+        
+        searchWorkItem = currentWorkItem
+        
+        DispatchQueue.global(qos: .background).asyncAfter(deadline: .now() + 0.2, execute: currentWorkItem)
     }
 }

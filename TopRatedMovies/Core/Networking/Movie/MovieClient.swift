@@ -10,8 +10,7 @@ import Foundation
 protocol MovieClientProtocol {
     
     func getTopRatedMovies(page: Int, completion: @escaping (Result<MovieResult, APIError>) -> Void)
-    
-    // searchItems
+    func search(query: String, page: Int, completion: @escaping (Result<MovieResult, APIError>) -> Void)
 }
 
 final class MovieClient: APIClient, MovieClientProtocol {
@@ -24,6 +23,11 @@ final class MovieClient: APIClient, MovieClientProtocol {
     
     func getTopRatedMovies(page: Int, completion: @escaping (Result<MovieResult, APIError>) -> Void) {
         let request = MovieProvider.getTopRated(page: page).request
+        fetch(with: request, completion: completion)
+    }
+    
+    func search(query: String, page: Int, completion: @escaping (Result<MovieResult, APIError>) -> Void) {
+        let request = MovieProvider.search(query: query, page: page).request
         fetch(with: request, completion: completion)
     }
 }

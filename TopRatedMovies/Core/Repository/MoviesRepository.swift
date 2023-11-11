@@ -18,4 +18,8 @@ final class MovieRepository: MovieUseCaseProtocol {
     func getTopRatedMovies(page: Int, completion: @escaping (Result<MovieResult, APIError>) -> Void) {
         remoteDataSource.getTopRatedMovies(page: page, completion: completion)
     }
+    
+    func search(query: String, page: Int, completion: @escaping (Result<MovieResult, APIError>) -> Void) {
+        remoteDataSource.search(query: query, page: page, completion: completion)
+    }
 }
