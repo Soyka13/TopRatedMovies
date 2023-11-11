@@ -83,7 +83,11 @@ class MovieListViewController: UIViewController {
     }
     
     @objc func refresh() {
-        viewModel.fetchTopRatedMovies()
+        if let searchText = searchBar.text, searchBar.text?.isEmpty == false {
+            viewModel.searchMovies(with: searchText)
+        } else {
+            viewModel.fetchTopRatedMovies()
+        }
     }
 }
 
@@ -100,7 +104,7 @@ extension MovieListViewController: MovieListViewModelViewDelegate {
 extension MovieListViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        guard !searchText.isEmpty else {
+        guard !searchText.isEmpty, !searchText.trimmingCharacters(in: .whitespaces).isEmpty else {
             viewModel.fetchTopRatedMovies()
             return
         }
