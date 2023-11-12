@@ -74,10 +74,6 @@ class MovieListViewController: UIViewController {
         dataSource = ListDataSource.make(for: viewModel.movieCells)
         tableView.dataSource = dataSource
         tableView.reloadData()
-        
-        if tableView.refreshControl?.isRefreshing == true {
-            tableView.refreshControl?.endRefreshing()
-        }
     }
     
     @objc private func refresh() {
@@ -91,6 +87,10 @@ class MovieListViewController: UIViewController {
     private func stopLoaderIfNeeded() {
         if searchBar.isLoading {
             searchBar.isLoading = false
+        }
+        
+        if tableView.refreshControl?.isRefreshing == true {
+            tableView.refreshControl?.endRefreshing()
         }
     }
 }
