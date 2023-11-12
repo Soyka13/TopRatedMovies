@@ -21,9 +21,9 @@ extension MovieProvider: Endpoint {
     var parameters: [String: Any]? {
         switch self {
         case .getTopRated(let page):
-            return ["page": page]
+            return ["language": "en-US", "page": page]
         case .search(let query, let page):
-            return ["query": query, "page": page]
+            return ["language": "en-US", "query": query, "page": page]
         }
     }
     

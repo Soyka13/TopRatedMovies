@@ -33,10 +33,10 @@ final class OccurancesViewModel: OccurancesViewModelProtocol {
         viewState.currentEntities.map(OccuranceCellViewModel.init)
     }
     
-    private let movieItem: MovieItem
+    private let movieItem: Movie
     private let useCase: OccurancesUseCaseProtocol
     
-    init(movieItem: MovieItem, useCase: OccurancesUseCaseProtocol) {
+    init(movieItem: Movie, useCase: OccurancesUseCaseProtocol) {
         self.movieItem = movieItem
         self.useCase = useCase
     }

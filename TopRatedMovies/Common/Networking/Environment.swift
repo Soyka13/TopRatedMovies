@@ -18,8 +18,8 @@ final class Environment {
         "https://api.themoviedb.org"
     }
     
-    var regularImageURLString: String {
-        "https://image.tmdb.org/t/p/w185"
+    var regularImageBaseURLString: String {
+        "https://image.tmdb.org"
     }
     
     private init() {}

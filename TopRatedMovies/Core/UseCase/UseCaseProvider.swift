@@ -15,14 +15,17 @@ protocol UseCaseProviderProtocol {
 final class UseCaseProvider: UseCaseProviderProtocol {
     
     private let remoteDataSource: RemoteDataSourceProtocol
+    private let localDataSource: LocalDataSourceProtocol
     
-    init(remoteDataSource: RemoteDataSourceProtocol) {
+    init(remoteDataSource: RemoteDataSourceProtocol, localDataSource: LocalDataSourceProtocol) {
         self.remoteDataSource = remoteDataSource
+        self.localDataSource = localDataSource
     }
     
     func movieUseCase() -> MovieUseCaseProtocol {
         let remoteDataSource = remoteDataSource.movieDataSource()
-        let movieRepository = MovieRepository(remoteDataSource: remoteDataSource)
+        let localDataSource = localDataSource.movieDataSource()
+        let movieRepository = MovieRepository(remoteDataSource: remoteDataSource, localDataSource: localDataSource)
         return MovieUseCase(movieRepository: movieRepository)
     }
     

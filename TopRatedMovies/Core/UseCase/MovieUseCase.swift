@@ -9,6 +9,7 @@ import Foundation
 
 protocol MovieUseCaseProtocol {
     func getTopRatedMovies(page: Int, completion: @escaping (Result<MovieResult, APIError>) -> Void)
+    func loadImage(with path: String, completion: @escaping (Result<Data, APIError>) -> Void)
     func search(query: String, page: Int, completion: @escaping (Result<MovieResult, APIError>) -> Void)
 }
 
@@ -24,9 +25,11 @@ final class MovieUseCase: MovieUseCaseProtocol {
         movieRepository.getTopRatedMovies(page: page, completion: completion)
     }
     
+    func loadImage(with path: String, completion: @escaping (Result<Data, APIError>) -> Void) {
+        movieRepository.loadImage(with: path, completion: completion)
+    }
+    
     func search(query: String, page: Int, completion: @escaping (Result<MovieResult, APIError>) -> Void) {
         movieRepository.search(query: query, page: page, completion: completion)
     }
-    
-    
 }

@@ -9,7 +9,7 @@ import UIKit
 
 class MovieCell: UITableViewCell {
 
-    @IBOutlet weak var posterImageView: DownloadableImageView!
+    @IBOutlet weak var posterImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
     
@@ -25,7 +25,7 @@ class MovieCell: UITableViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         
-        posterImageView.cancelDownloading()
+        viewModel?.cancelImageDownloading()
         posterImageView.image = nil
     }
     
@@ -37,8 +37,10 @@ class MovieCell: UITableViewCell {
             ratingLabel.text = "\(voteAverage)"
         }
         
-        if let posterURL = viewModel.movie.posterURL {
-            posterImageView.download(from: posterURL)
+        viewModel.loadImage { [weak self] result in
+            if case .success(let data) = result {
+                self?.posterImageView.image = UIImage(data: data)
+            }
         }
     }
 }

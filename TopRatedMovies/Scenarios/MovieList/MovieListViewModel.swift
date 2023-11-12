@@ -11,7 +11,7 @@ protocol MovieListViewModelProtocol: AnyObject {
     var viewDelegate: ListViewStateDelegate? { get set }
     
     var movieCells: [MovieCellViewModel] { get }
-    var viewState: ListViewState<MovieItem> { get }
+    var viewState: ListViewState<Movie> { get }
     
     func fetchTopRatedMovies()
     func searchMovies(with query: String)
@@ -21,14 +21,16 @@ final class MovieListViewModel: MovieListViewModelProtocol {
     
     weak var viewDelegate: ListViewStateDelegate?
     
-    var viewState: ListViewState<MovieItem> = .empty {
+    var viewState: ListViewState<Movie> = .empty {
         didSet {
-            viewDelegate?.viewStateDidChange(viewState)
+            DispatchQueue.main.async {
+                self.viewDelegate?.viewStateDidChange(self.viewState)
+            }
         }
     }
     
     var movieCells: [MovieCellViewModel] {
-        viewState.currentEntities.map(MovieCellViewModel.init)
+        viewState.currentEntities.map { MovieCellViewModel($0, useCase: movieUseCase) }
     }
     
     private let movieUseCase: MovieUseCaseProtocol
@@ -47,7 +49,7 @@ final class MovieListViewModel: MovieListViewModelProtocol {
                 if movieResult.results.isEmpty {
                     self?.viewState = .empty
                 } else {
-                    self?.viewState = .populated(movieResult.results.map(MovieItem.init))
+                    self?.viewState = .populated(movieResult.results)
                 }
             case .failure(let error):
                 self?.viewState = .error(error)
@@ -66,7 +68,7 @@ final class MovieListViewModel: MovieListViewModelProtocol {
                     if movieResult.results.isEmpty {
                         self?.viewState = .empty
                     } else {
-                        self?.viewState = .populated(movieResult.results.map(MovieItem.init))
+                        self?.viewState = .populated(movieResult.results)
                     }
                 case .failure(let error):
                     self?.viewState = .error(error)

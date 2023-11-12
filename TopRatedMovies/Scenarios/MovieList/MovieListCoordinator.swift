@@ -8,7 +8,7 @@
 import UIKit
 
 protocol MovieListCoordinatorProtocol: Coordinator {
-    func showOccurances(with movieItem: MovieItem)
+    func showOccurances(with movieItem: Movie)
 }
 
 final class MovieListCoordinator: BaseCoordinator, MovieListCoordinatorProtocol {
@@ -19,7 +19,7 @@ final class MovieListCoordinator: BaseCoordinator, MovieListCoordinatorProtocol 
         navigationController.pushViewController(vc, animated: true)
     }
     
-    func showOccurances(with movieItem: MovieItem) {
+    func showOccurances(with movieItem: Movie) {
         let vc = OccurancesBuilder.build(with: movieItem)
         navigationController.pushViewController(vc, animated: true)
     }

@@ -44,9 +44,7 @@ extension Endpoint {
         var components = URLComponents(string: baseURL)
         components?.path = path
         
-        var queryItems = [
-            URLQueryItem(name: "language", value: "en-US")
-        ]
+        var queryItems = [URLQueryItem]()
         
         if let parameters {
             let customQueryItems = parameters.map { URLQueryItem(name: "\($0)", value: "\($1)") }

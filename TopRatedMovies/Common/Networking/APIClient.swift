@@ -58,4 +58,34 @@ extension APIClient {
             }
         }.resume()
     }
+    
+    func download(with request: URLRequest?,
+                  queue: DispatchQueue = .main,
+                  completion: @escaping (Result<Data, APIError>) -> Void) {
+        guard let request = request else {
+            completion(.failure(.invalidRequest))
+            return
+        }
+        
+        session.dataTask(with: request) { data, response, _ in
+            guard let httpResponse = response as? HTTPURLResponse else {
+                completion(.failure(.requestFailed))
+                return
+            }
+            
+            guard 200..<300 ~= httpResponse.statusCode else {
+                completion(.failure(APIError(statusCode: httpResponse.statusCode)))
+                return
+            }
+            
+            guard let data = data else {
+                completion(.failure(.invalidData))
+                return
+            }
+            
+            queue.async {
+                completion(.success(data))
+            }
+        }.resume()
+    }
 }

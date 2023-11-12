@@ -63,7 +63,7 @@ class MovieListViewController: UIViewController {
         viewModel.viewDelegate = self
     }
     
-    private func configureView(withState state: ListViewState<MovieItem>) {
+    private func configureView(withState state: ListViewState<Movie>) {
         switch state {
         case .empty:
             // TODO: create empty view
@@ -104,7 +104,7 @@ class MovieListViewController: UIViewController {
 extension MovieListViewController: ListViewStateDelegate {
     
     func viewStateDidChange<T>(_ state: ListViewState<T>) {
-        guard let state = state as? ListViewState<MovieItem> else {
+        guard let state = state as? ListViewState<Movie> else {
             return
         }
         

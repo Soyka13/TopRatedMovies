@@ -10,7 +10,9 @@ import UIKit
 final class MovieListBuilder {
     
     static func build() -> UIViewController {
-        let useCase = UseCaseProvider(remoteDataSource: RemoteDataSourceProvider()).movieUseCase()
+        let remoteDataSource = RemoteDataSourceProvider()
+        let localDataSource = LocalDataSourceProvider()
+        let useCase = UseCaseProvider(remoteDataSource: remoteDataSource, localDataSource: localDataSource).movieUseCase()
         let viewModel = MovieListViewModel(movieUseCase: useCase)
         let viewController = MovieListViewController(viewModel: viewModel)
         return viewController

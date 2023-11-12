@@ -7,271 +7,62 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "3EE238CB-5AAD-420C-91E6-58E1E04FA736"
+            uuid = "4497991E-E942-451A-8773-276BAC5E249E"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TopRatedMovies/Core/Networking/APIClient.swift"
+            filePath = "TopRatedMovies/Scenarios/MovieList/Cells/MovieCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "fetch(with:queue:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "DF46CA2B-C62F-4B55-825D-ACC68D1D3501"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TopRatedMovies/Core/Networking/Endpoint.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
-            landmarkName = "request"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "DF46CA2B-C62F-4B55-825D-ACC68D1D3501 - 2384a132b2c45738"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TopRatedMovies.Endpoint.request.getter : Swift.Optional&lt;Foundation.URLRequest&gt;"
-                  moduleName = "TopRatedMovies"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/olenastepaniuk/Developer-without-sync/JatApp/final/TopRatedMovies/TopRatedMovies/Core/Networking/Endpoint.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62"
-                  offsetFromSymbolStart = "636">
-               </Location>
-               <Location
-                  uuid = "DF46CA2B-C62F-4B55-825D-ACC68D1D3501 - 2384a132b2c45759"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TopRatedMovies.Endpoint.request.getter : Swift.Optional&lt;Foundation.URLRequest&gt;"
-                  moduleName = "TopRatedMovies"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/olenastepaniuk/Developer-without-sync/JatApp/final/TopRatedMovies/TopRatedMovies/Core/Networking/Endpoint.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "61"
-                  endingLineNumber = "61"
-                  offsetFromSymbolStart = "636">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "60A0FC4C-5C76-4C31-93F7-681BB96D0128"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TopRatedMovies/Core/Networking/Endpoint.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "urlComponents"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "DF83ECD7-D955-4826-A0DD-FC45F14B90B5"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TopRatedMovies/Core/Networking/Endpoint.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "urlComponents"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "DF83ECD7-D955-4826-A0DD-FC45F14B90B5 - 8bbd41100476488b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TopRatedMovies.Endpoint.urlComponents.getter : Swift.Optional&lt;Foundation.URLComponents&gt;"
-                  moduleName = "TopRatedMovies"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/olenastepaniuk/Developer-without-sync/JatApp/final/TopRatedMovies/TopRatedMovies/Core/Networking/Endpoint.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "57"
-                  endingLineNumber = "57"
-                  offsetFromSymbolStart = "1348">
-               </Location>
-               <Location
-                  uuid = "DF83ECD7-D955-4826-A0DD-FC45F14B90B5 - 8bbd41100476488b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TopRatedMovies.Endpoint.urlComponents.getter : Swift.Optional&lt;Foundation.URLComponents&gt;"
-                  moduleName = "TopRatedMovies"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/olenastepaniuk/Developer-without-sync/JatApp/final/TopRatedMovies/TopRatedMovies/Core/Networking/Endpoint.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "57"
-                  endingLineNumber = "57"
-                  offsetFromSymbolStart = "1336">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "3741DC2E-B841-4F29-AAE9-AF6956CC8D6F"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TopRatedMovies/Scenarios/Occurances/OccurancesViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
-            landmarkName = "viewStateDidChange(_:)"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "update()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "3741DC2E-B841-4F29-AAE9-AF6956CC8D6F - cd261f5619836f69"
+                  uuid = "4497991E-E942-451A-8773-276BAC5E249E - 7d87967d63d85bbf"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "TopRatedMovies.OccurancesViewController.viewStateDidChange&lt;&#x3c4;_0_0&gt;(TopRatedMovies.ListViewState&lt;&#x3c4;_0_0&gt;) -&gt; ()"
+                  symbolName = "TopRatedMovies.MovieCell.update() -&gt; ()"
                   moduleName = "TopRatedMovies"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/olenastepaniuk/Developer-without-sync/JatApp/final/TopRatedMovies/TopRatedMovies/Scenarios/Occurances/OccurancesViewController.swift"
+                  urlString = "file:///Users/olenastepaniuk/Developer-without-sync/JatApp/final/TopRatedMovies/TopRatedMovies/Scenarios/MovieList/Cells/MovieCell.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "76"
-                  endingLineNumber = "76"
-                  offsetFromSymbolStart = "348">
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "1716">
                </Location>
                <Location
-                  uuid = "3741DC2E-B841-4F29-AAE9-AF6956CC8D6F - cd261f5619836f69"
+                  uuid = "4497991E-E942-451A-8773-276BAC5E249E - 334eb5a8433e14f4"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "TopRatedMovies.OccurancesViewController.viewStateDidChange&lt;&#x3c4;_0_0&gt;(TopRatedMovies.ListViewState&lt;&#x3c4;_0_0&gt;) -&gt; ()"
+                  symbolName = "closure #1 (Swift.Result&lt;Foundation.Data, TopRatedMovies.APIError&gt;) -&gt; () in TopRatedMovies.MovieCell.update() -&gt; ()"
                   moduleName = "TopRatedMovies"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/olenastepaniuk/Developer-without-sync/JatApp/final/TopRatedMovies/TopRatedMovies/Scenarios/Occurances/OccurancesViewController.swift"
+                  urlString = "file:///Users/olenastepaniuk/Developer-without-sync/JatApp/final/TopRatedMovies/TopRatedMovies/Scenarios/MovieList/Cells/MovieCell.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "76"
-                  endingLineNumber = "76"
-                  offsetFromSymbolStart = "96">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "49890AC7-42F3-4F6C-9A77-74D12BE508FD"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TopRatedMovies/Common/UISearchBar+Extensions.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "isLoading"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "49890AC7-42F3-4F6C-9A77-74D12BE508FD - b0452a0b6dd7f7df"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__C.UISearchBar.isLoading.setter : Swift.Bool"
-                  moduleName = "TopRatedMovies"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/olenastepaniuk/Developer-without-sync/JatApp/final/TopRatedMovies/TopRatedMovies/Common/UISearchBar+Extensions.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "36"
-                  endingLineNumber = "36"
-                  offsetFromSymbolStart = "944">
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "124">
                </Location>
                <Location
-                  uuid = "49890AC7-42F3-4F6C-9A77-74D12BE508FD - b0452a0b6dd7f791"
+                  uuid = "4497991E-E942-451A-8773-276BAC5E249E - 7d87967d63d85bbf"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "__C.UISearchBar.isLoading.setter : Swift.Bool"
+                  symbolName = "TopRatedMovies.MovieCell.update() -&gt; ()"
                   moduleName = "TopRatedMovies"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/olenastepaniuk/Developer-without-sync/JatApp/final/TopRatedMovies/TopRatedMovies/Common/UISearchBar+Extensions.swift"
+                  urlString = "file:///Users/olenastepaniuk/Developer-without-sync/JatApp/final/TopRatedMovies/TopRatedMovies/Scenarios/MovieList/Cells/MovieCell.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "34"
-                  endingLineNumber = "34"
-                  offsetFromSymbolStart = "392">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "2E4FF543-9F38-45FD-84E2-D5AAD35D7AD8"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TopRatedMovies/Common/UISearchBar+Extensions.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "isLoading"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "2E4FF543-9F38-45FD-84E2-D5AAD35D7AD8 - b0452a0b6dd7f672"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__C.UISearchBar.isLoading.setter : Swift.Bool"
-                  moduleName = "TopRatedMovies"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/olenastepaniuk/Developer-without-sync/JatApp/final/TopRatedMovies/TopRatedMovies/Common/UISearchBar+Extensions.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "33"
-                  endingLineNumber = "33"
-                  offsetFromSymbolStart = "780">
-               </Location>
-               <Location
-                  uuid = "2E4FF543-9F38-45FD-84E2-D5AAD35D7AD8 - b0452a0b6dd7f634"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__C.UISearchBar.isLoading.setter : Swift.Bool"
-                  moduleName = "TopRatedMovies"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/olenastepaniuk/Developer-without-sync/JatApp/final/TopRatedMovies/TopRatedMovies/Common/UISearchBar+Extensions.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "272">
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "1308">
                </Location>
             </Locations>
          </BreakpointContent>

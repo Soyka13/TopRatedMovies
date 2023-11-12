@@ -9,8 +9,10 @@ import UIKit
 
 final class OccurancesBuilder {
     
-    static func build(with movieItem: MovieItem) -> UIViewController {
-        let useCase = UseCaseProvider(remoteDataSource: RemoteDataSourceProvider()).occurancesUseCase()
+    static func build(with movieItem: Movie) -> UIViewController {
+        let remoteDataSource = RemoteDataSourceProvider()
+        let localDataSource = LocalDataSourceProvider()
+        let useCase = UseCaseProvider(remoteDataSource: remoteDataSource, localDataSource: localDataSource).occurancesUseCase()
         let viewModel = OccurancesViewModel(movieItem: movieItem, useCase: useCase)
         let viewController = OccurancesViewController(viewModel: viewModel)
         return viewController

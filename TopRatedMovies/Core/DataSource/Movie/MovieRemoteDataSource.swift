@@ -10,6 +10,7 @@ import Foundation
 protocol MovieRemoteDataSourceProtocol {
     
     func getTopRatedMovies(page: Int, completion: @escaping (Result<MovieResult, APIError>) -> Void)
+    func loadImage(with path: String, completion: @escaping (Result<Data, APIError>) -> Void)
     func search(query: String, page: Int, completion: @escaping (Result<MovieResult, APIError>) -> Void)
 }
 
@@ -23,6 +24,10 @@ final class MovieRemoteDataSource: MovieRemoteDataSourceProtocol {
     
     func getTopRatedMovies(page: Int, completion: @escaping (Result<MovieResult, APIError>) -> Void) {
         apiClient.getTopRatedMovies(page: page, completion: completion)
+    }
+    
+    func loadImage(with path: String, completion: @escaping (Result<Data, APIError>) -> Void) {
+        apiClient.loadImage(with: path, completion: completion)
     }
     
     func search(query: String, page: Int, completion: @escaping (Result<MovieResult, APIError>) -> Void) {
