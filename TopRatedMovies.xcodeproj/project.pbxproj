@@ -24,6 +24,7 @@
 		530466992B00C86B00444DF8 /* OccuranceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 530466972B00C86B00444DF8 /* OccuranceCell.xib */; };
 		5304669B2B00C97D00444DF8 /* OccuranceCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5304669A2B00C97D00444DF8 /* OccuranceCellViewModel.swift */; };
 		5304669D2B00CA8100444DF8 /* OccuranceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5304669C2B00CA8100444DF8 /* OccuranceItem.swift */; };
+		5304669F2B00D63600444DF8 /* UISearchBar+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5304669E2B00D63600444DF8 /* UISearchBar+Extensions.swift */; };
 		5345395D2AFE709D008FF64F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5345395C2AFE709D008FF64F /* AppDelegate.swift */; };
 		5345395F2AFE709D008FF64F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5345395E2AFE709D008FF64F /* SceneDelegate.swift */; };
 		534539662AFE70A8008FF64F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 534539652AFE70A8008FF64F /* Assets.xcassets */; };
@@ -89,6 +90,7 @@
 		530466972B00C86B00444DF8 /* OccuranceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OccuranceCell.xib; sourceTree = "<group>"; };
 		5304669A2B00C97D00444DF8 /* OccuranceCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OccuranceCellViewModel.swift; sourceTree = "<group>"; };
 		5304669C2B00CA8100444DF8 /* OccuranceItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OccuranceItem.swift; sourceTree = "<group>"; };
+		5304669E2B00D63600444DF8 /* UISearchBar+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISearchBar+Extensions.swift"; sourceTree = "<group>"; };
 		534539592AFE709D008FF64F /* TopRatedMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopRatedMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5345395C2AFE709D008FF64F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5345395E2AFE709D008FF64F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -327,6 +329,7 @@
 				5304665E2AFEEC1700444DF8 /* ListDataSource.swift */,
 				530466682AFFA15A00444DF8 /* DownloadableImageView.swift */,
 				530466752AFFAE2600444DF8 /* ListViewState.swift */,
+				5304669E2B00D63600444DF8 /* UISearchBar+Extensions.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -527,6 +530,7 @@
 				534539972AFE7185008FF64F /* APIClient.swift in Sources */,
 				5304665F2AFEEC1700444DF8 /* ListDataSource.swift in Sources */,
 				5304669D2B00CA8100444DF8 /* OccuranceItem.swift in Sources */,
+				5304669F2B00D63600444DF8 /* UISearchBar+Extensions.swift in Sources */,
 				534539BF2AFE77C9008FF64F /* MovieListBuilder.swift in Sources */,
 				534539AE2AFE7548008FF64F /* MovieUseCase.swift in Sources */,
 				530466982B00C86B00444DF8 /* OccuranceCell.swift in Sources */,

@@ -86,11 +86,17 @@ class MovieListViewController: UIViewController {
         }
     }
     
-    @objc func refresh() {
+    @objc private func refresh() {
         if let searchText = searchBar.text, searchBar.text?.isEmpty == false {
             viewModel.searchMovies(with: searchText)
         } else {
             viewModel.fetchTopRatedMovies()
+        }
+    }
+    
+    private func stopLoaderIfNeeded() {
+        if searchBar.isLoading {
+            searchBar.isLoading = false
         }
     }
 }
@@ -102,6 +108,7 @@ extension MovieListViewController: ListViewStateDelegate {
             return
         }
         
+        stopLoaderIfNeeded()
         configureView(withState: state)
     }
 }
@@ -115,7 +122,8 @@ extension MovieListViewController: UISearchBarDelegate {
             viewModel.fetchTopRatedMovies()
             return
         }
-        
+    
+        searchBar.isLoading = true
         viewModel.searchMovies(with: searchText)
     }
 }
