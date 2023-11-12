@@ -17,6 +17,8 @@ class MovieListViewController: UIViewController {
     private let viewModel: MovieListViewModelProtocol
     private var dataSource: ListDataSource<MovieCellViewModelProtocol>?
     
+    weak var coordinator: MovieListCoordinatorProtocol?
+    
     init(viewModel: MovieListViewModelProtocol) {
         self.viewModel = viewModel
         super.init(nibName: MovieListViewController.nibName, bundle: nil)
@@ -64,8 +66,10 @@ class MovieListViewController: UIViewController {
     private func configureView(withState state: ListViewState<MovieItem>) {
         switch state {
         case .empty:
+            // TODO: create empty view
             return
         case .error(let error):
+            // TODO: create error view
             return
         case .populated(_):
             reloadTableView()
@@ -91,11 +95,14 @@ class MovieListViewController: UIViewController {
     }
 }
 
-extension MovieListViewController: MovieListViewModelViewDelegate {
+extension MovieListViewController: ListViewStateDelegate {
     
-    func viewStateDidChange(_ state: ListViewState<MovieItem>) {
+    func viewStateDidChange<T>(_ state: ListViewState<T>) {
+        guard let state = state as? ListViewState<MovieItem> else {
+            return
+        }
+        
         configureView(withState: state)
-        reloadTableView()
     }
 }
 
@@ -119,5 +126,8 @@ extension MovieListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        let model = viewModel.movieCells[indexPath.row].movie
+        coordinator?.showOccurances(with: model)
     }
 }

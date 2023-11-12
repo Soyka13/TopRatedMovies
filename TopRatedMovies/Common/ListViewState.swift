@@ -7,6 +7,10 @@
 
 import Foundation
 
+protocol ListViewStateDelegate: AnyObject {
+    func viewStateDidChange<T>(_ state: ListViewState<T>)
+}
+
 enum ListViewState<T> {
     case empty
     case error(Error)

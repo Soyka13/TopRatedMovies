@@ -7,7 +7,12 @@
 
 import Foundation
 
-final class MovieRepository: MovieUseCaseProtocol {
+protocol MovieRepositoryProtocol {
+    func getTopRatedMovies(page: Int, completion: @escaping (Result<MovieResult, APIError>) -> Void)
+    func search(query: String, page: Int, completion: @escaping (Result<MovieResult, APIError>) -> Void)
+}
+
+final class MovieRepository: MovieRepositoryProtocol {
     
     private let remoteDataSource: MovieRemoteDataSourceProtocol
     

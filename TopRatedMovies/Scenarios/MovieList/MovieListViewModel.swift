@@ -8,7 +8,7 @@
 import Foundation
 
 protocol MovieListViewModelProtocol: AnyObject {
-    var viewDelegate: MovieListViewModelViewDelegate? { get set }
+    var viewDelegate: ListViewStateDelegate? { get set }
     
     var movieCells: [MovieCellViewModel] { get }
     var viewState: ListViewState<MovieItem> { get }
@@ -17,13 +17,9 @@ protocol MovieListViewModelProtocol: AnyObject {
     func searchMovies(with query: String)
 }
 
-protocol MovieListViewModelViewDelegate: AnyObject {
-    func viewStateDidChange(_ state: ListViewState<MovieItem>)
-}
-
 final class MovieListViewModel: MovieListViewModelProtocol {
     
-    var viewDelegate: MovieListViewModelViewDelegate?
+    weak var viewDelegate: ListViewStateDelegate?
     
     var viewState: ListViewState<MovieItem> = .empty {
         didSet {
@@ -32,7 +28,7 @@ final class MovieListViewModel: MovieListViewModelProtocol {
     }
     
     var movieCells: [MovieCellViewModel] {
-        viewState.currentEntities.compactMap { MovieCellViewModel($0) }
+        viewState.currentEntities.map(MovieCellViewModel.init)
     }
     
     private let movieUseCase: MovieUseCaseProtocol

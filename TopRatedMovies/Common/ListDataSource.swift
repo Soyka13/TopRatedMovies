@@ -49,3 +49,16 @@ extension ListDataSource where ViewModel == MovieCellViewModelProtocol {
         })
     }
 }
+
+extension ListDataSource where ViewModel == OccuranceCellViewModelProtocol {
+    
+    static func make(for cellViewModels: [ViewModel],
+                     reuseIdentifier: String = OccuranceCell.dequeueIdentifier) -> ListDataSource {
+        ListDataSource(cellViewModels: cellViewModels,
+                       reuseIdentifier: reuseIdentifier,
+                       cellConfigurator: { (viewModel, cell) in
+            let cell = cell as? OccuranceCell
+            cell?.viewModel = viewModel
+        })
+    }
+}

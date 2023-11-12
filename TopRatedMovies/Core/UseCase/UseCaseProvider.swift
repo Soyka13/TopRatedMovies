@@ -9,6 +9,7 @@ import Foundation
 
 protocol UseCaseProviderProtocol {
     func movieUseCase() -> MovieUseCaseProtocol
+    func occurancesUseCase() -> OccurancesUseCaseProtocol
 }
 
 final class UseCaseProvider: UseCaseProviderProtocol {
@@ -20,7 +21,14 @@ final class UseCaseProvider: UseCaseProviderProtocol {
     }
     
     func movieUseCase() -> MovieUseCaseProtocol {
-        let remoteDataRepository = remoteDataSource.movieDataSource()
-        return MovieRepository(remoteDataSource: remoteDataRepository)
+        let remoteDataSource = remoteDataSource.movieDataSource()
+        let movieRepository = MovieRepository(remoteDataSource: remoteDataSource)
+        return MovieUseCase(movieRepository: movieRepository)
+    }
+    
+    func occurancesUseCase() -> OccurancesUseCaseProtocol {
+        let dataSource = remoteDataSource.occurancesDataSource()
+        let occurancesRepository = OccurancesRepository(dataSource: dataSource)
+        return OccurancesUseCase(repository: occurancesRepository)
     }
 }

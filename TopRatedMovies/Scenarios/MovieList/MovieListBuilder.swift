@@ -7,9 +7,11 @@
 
 import UIKit
 
-final class MovieListBuilder: ModuleBuilder {
+final class MovieListBuilder {
+    
     static func build() -> UIViewController {
-        let viewModel = MovieListViewModel(movieUseCase: UseCaseProvider(remoteDataSource: RemoteDataSourceProvider()).movieUseCase())
+        let useCase = UseCaseProvider(remoteDataSource: RemoteDataSourceProvider()).movieUseCase()
+        let viewModel = MovieListViewModel(movieUseCase: useCase)
         let viewController = MovieListViewController(viewModel: viewModel)
         return viewController
     }

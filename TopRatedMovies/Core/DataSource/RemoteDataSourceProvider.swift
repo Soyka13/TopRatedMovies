@@ -10,11 +10,16 @@ import Foundation
 protocol RemoteDataSourceProtocol {
 
     func movieDataSource() -> MovieRemoteDataSourceProtocol
+    func occurancesDataSource() -> OccurancesDataSourceProtocol
 }
 
 final class RemoteDataSourceProvider: RemoteDataSourceProtocol {
     
     func movieDataSource() -> MovieRemoteDataSourceProtocol {
         MovieRemoteDataSource(apiClient: MovieClient())
+    }
+    
+    func occurancesDataSource() -> OccurancesDataSourceProtocol {
+        OccurancesDataSource(service: OccurancesCounterService())
     }
 }
