@@ -29,13 +29,15 @@ final class MovieListViewModel: MovieListViewModelProtocol {
         }
     }
     
+    
     var movieCells: [MovieCellViewModel] {
-        viewState.currentEntities.map { MovieCellViewModel($0, useCase: movieUseCase) }
+        currentEntities.map { MovieCellViewModel($0, useCase: movieUseCase) }
     }
     
     private let movieUseCase: MovieUseCaseProtocol
-    
     private var searchWorkItem: DispatchWorkItem?
+    
+    private var currentEntities: [Movie] = []
     
     init(movieUseCase: MovieUseCaseProtocol) {
         self.movieUseCase = movieUseCase
@@ -45,11 +47,11 @@ final class MovieListViewModel: MovieListViewModelProtocol {
         movieUseCase.getTopRatedMovies(page: 1) { [weak self] result in
             switch result {
             case .success(let movieResult):
-                
                 if movieResult.results.isEmpty {
                     self?.viewState = .empty
                 } else {
-                    self?.viewState = .populated(movieResult.results)
+                    self?.viewState = .populated
+                    self?.currentEntities = movieResult.results
                 }
             case .failure(let error):
                 self?.viewState = .error(error)
@@ -64,11 +66,11 @@ final class MovieListViewModel: MovieListViewModelProtocol {
             self.movieUseCase.search(query: query, page: 1) { [weak self] result in
                 switch result {
                 case .success(let movieResult):
-                    
                     if movieResult.results.isEmpty {
                         self?.viewState = .empty
                     } else {
-                        self?.viewState = .populated(movieResult.results)
+                        self?.viewState = .populated
+                        self?.currentEntities = movieResult.results
                     }
                 case .failure(let error):
                     self?.viewState = .error(error)

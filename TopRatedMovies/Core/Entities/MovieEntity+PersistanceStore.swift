@@ -29,15 +29,9 @@ extension PersistenceStore where T == MovieEntity {
         }
     }
     
-    func saveImage() {
-        
-    }
-    
     func findAll() -> [MovieEntity] {
         guard let entityName = MovieEntity.entity().name else { return [] }
         let request = NSFetchRequest<MovieEntity>(entityName: entityName)
         return (try? managedObjectContext.fetch(request)) ?? []
     }
-    
-    
 }

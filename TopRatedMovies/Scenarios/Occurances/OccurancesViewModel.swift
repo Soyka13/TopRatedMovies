@@ -30,11 +30,12 @@ final class OccurancesViewModel: OccurancesViewModelProtocol {
     }
     
     var occurancesCells: [OccuranceCellViewModel] {
-        viewState.currentEntities.map(OccuranceCellViewModel.init)
+        currentEntities.map(OccuranceCellViewModel.init)
     }
     
     private let movieItem: Movie
     private let useCase: OccurancesUseCaseProtocol
+    private var currentEntities: [OccuranceItem] = []
     
     init(movieItem: Movie, useCase: OccurancesUseCaseProtocol) {
         self.movieItem = movieItem
@@ -47,6 +48,7 @@ final class OccurancesViewModel: OccurancesViewModelProtocol {
             .map { OccuranceItem(char: $0.key, count: $0.value)}
             .sorted { $0.char < $1.char }
         
-        viewState = .populated(occurances)
+        viewState = .populated
+        currentEntities = occurances
     }
 }

@@ -14,14 +14,5 @@ protocol ListViewStateDelegate: AnyObject {
 enum ListViewState<T> {
     case empty
     case error(Error)
-    case populated([T])
-    
-    var currentEntities: [T] {
-        switch self {
-        case .populated(let entities):
-            return entities
-        case .empty, .error:
-            return []
-        }
-    }
+    case populated
 }

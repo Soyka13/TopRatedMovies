@@ -29,8 +29,4 @@ final class MovieLocalDataSource: MovieLocalDataSourceProtocol {
     func findAllMovies() -> [Movie] {
         store.findAll().map { $0.asMovie() }
     }
-    
-    func savePosters(_ data: Data, movieId: Int) {
-        
-    }
 }

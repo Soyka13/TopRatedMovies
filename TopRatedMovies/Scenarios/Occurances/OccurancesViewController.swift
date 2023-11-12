@@ -57,7 +57,7 @@ class OccurancesViewController: UIViewController {
         case .error(let error):
             // TODO: create error view
             return
-        case .populated(_):
+        case .populated:
             reloadTableView()
         }
     }
