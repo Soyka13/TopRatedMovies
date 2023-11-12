@@ -167,6 +167,7 @@
 		5304666B2AFFAA1C00444DF8 /* Scenarios */ = {
 			isa = PBXGroup;
 			children = (
+				538645D32B01623700BDD1FE /* Splash */,
 				5304666C2AFFAA3600444DF8 /* MovieList */,
 				5304667C2B00366400444DF8 /* Occurances */,
 			);
@@ -315,9 +316,8 @@
 				530466792AFFB04300444DF8 /* Core */,
 				5304666B2AFFAA1C00444DF8 /* Scenarios */,
 				5345398D2AFE7101008FF64F /* Common */,
-				534539672AFE70A8008FF64F /* LaunchScreen.storyboard */,
-				5345396A2AFE70A8008FF64F /* Info.plist */,
 				5345398C2AFE70B5008FF64F /* Resources */,
+				5345396A2AFE70A8008FF64F /* Info.plist */,
 			);
 			path = TopRatedMovies;
 			sourceTree = "<group>";
@@ -417,6 +417,14 @@
 				530466552AFEAACB00444DF8 /* MovieCellViewModel.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		538645D32B01623700BDD1FE /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				534539672AFE70A8008FF64F /* LaunchScreen.storyboard */,
+			);
+			path = Splash;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
