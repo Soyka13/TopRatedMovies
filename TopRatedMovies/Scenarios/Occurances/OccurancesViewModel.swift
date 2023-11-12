@@ -23,7 +23,7 @@ final class OccurancesViewModel: OccurancesViewModelProtocol {
     
     weak var viewDelegate: ListViewStateDelegate?
     
-    var viewState: ListViewState<OccuranceItem> = .empty {
+    var viewState: ListViewState = .empty {
         didSet {
             viewDelegate?.viewStateDidChange(viewState)
         }
@@ -48,7 +48,7 @@ final class OccurancesViewModel: OccurancesViewModelProtocol {
             .map { OccuranceItem(char: $0.key, count: $0.value)}
             .sorted { $0.char < $1.char }
         
-        viewState = .populated
+        viewState = occurances.isEmpty ? .empty : .populated
         currentEntities = occurances
     }
 }

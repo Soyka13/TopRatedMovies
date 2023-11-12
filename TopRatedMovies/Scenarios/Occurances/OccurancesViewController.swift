@@ -49,7 +49,7 @@ class OccurancesViewController: UIViewController {
         viewModel.viewDelegate = self
     }
     
-    private func configureView(withState state: ListViewState<OccuranceItem>) {
+    private func configureView(withState state: ListViewState) {
         switch state {
         case .empty:
             // TODO: create empty view
@@ -72,11 +72,7 @@ class OccurancesViewController: UIViewController {
 
 extension OccurancesViewController: ListViewStateDelegate {
     
-    func viewStateDidChange<T>(_ state: ListViewState<T>) {
-        guard let state = state as? ListViewState<OccuranceItem> else {
-            return
-        }
-        
+    func viewStateDidChange(_ state: ListViewState) {
         configureView(withState: state)
     }
 }
