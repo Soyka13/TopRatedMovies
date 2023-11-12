@@ -41,6 +41,7 @@ class OccurancesViewController: UIViewController {
     }
     
     private func setupTableView() {
+        tableView.delegate = self
         tableView.register(UINib(nibName: OccuranceCell.nibName, bundle: nil),
                            forCellReuseIdentifier: OccuranceCell.dequeueIdentifier)
     }
@@ -68,5 +69,12 @@ extension OccurancesViewController: ListViewStateDelegate {
     
     func viewStateDidChange(_ state: ListViewState) {
         configureView(with: state)
+    }
+}
+
+extension OccurancesViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
