@@ -48,7 +48,7 @@ final class OccurancesViewModel: OccurancesViewModelProtocol {
             .map { OccuranceItem(char: $0.key, count: $0.value)}
             .sorted { $0.char < $1.char }
         
-        viewState = occurances.isEmpty ? .empty : .populated
         currentEntities = occurances
+        viewState = occurances.isEmpty ? .empty : .populated
     }
 }

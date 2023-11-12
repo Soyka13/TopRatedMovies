@@ -44,6 +44,9 @@ final class MovieRepository: MovieRepositoryProtocol {
     }
     
     func search(query: String, page: Int, completion: @escaping (Result<MovieResult, APIError>) -> Void) {
+        let localSearchResults = localDataSource.search(with: query)
+        completion(.success(MovieResult(results: localSearchResults)))
+        
         remoteDataSource.search(query: query, page: page, completion: completion)
     }
 }
