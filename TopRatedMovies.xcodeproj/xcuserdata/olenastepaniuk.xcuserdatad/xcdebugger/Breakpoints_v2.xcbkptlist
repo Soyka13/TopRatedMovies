@@ -132,5 +132,149 @@
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3741DC2E-B841-4F29-AAE9-AF6956CC8D6F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TopRatedMovies/Scenarios/Occurances/OccurancesViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "viewStateDidChange(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3741DC2E-B841-4F29-AAE9-AF6956CC8D6F - cd261f5619836f69"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TopRatedMovies.OccurancesViewController.viewStateDidChange&lt;&#x3c4;_0_0&gt;(TopRatedMovies.ListViewState&lt;&#x3c4;_0_0&gt;) -&gt; ()"
+                  moduleName = "TopRatedMovies"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/olenastepaniuk/Developer-without-sync/JatApp/final/TopRatedMovies/TopRatedMovies/Scenarios/Occurances/OccurancesViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "348">
+               </Location>
+               <Location
+                  uuid = "3741DC2E-B841-4F29-AAE9-AF6956CC8D6F - cd261f5619836f69"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TopRatedMovies.OccurancesViewController.viewStateDidChange&lt;&#x3c4;_0_0&gt;(TopRatedMovies.ListViewState&lt;&#x3c4;_0_0&gt;) -&gt; ()"
+                  moduleName = "TopRatedMovies"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/olenastepaniuk/Developer-without-sync/JatApp/final/TopRatedMovies/TopRatedMovies/Scenarios/Occurances/OccurancesViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "96">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "49890AC7-42F3-4F6C-9A77-74D12BE508FD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TopRatedMovies/Common/UISearchBar+Extensions.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "isLoading"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "49890AC7-42F3-4F6C-9A77-74D12BE508FD - b0452a0b6dd7f7df"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__C.UISearchBar.isLoading.setter : Swift.Bool"
+                  moduleName = "TopRatedMovies"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/olenastepaniuk/Developer-without-sync/JatApp/final/TopRatedMovies/TopRatedMovies/Common/UISearchBar+Extensions.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "944">
+               </Location>
+               <Location
+                  uuid = "49890AC7-42F3-4F6C-9A77-74D12BE508FD - b0452a0b6dd7f791"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__C.UISearchBar.isLoading.setter : Swift.Bool"
+                  moduleName = "TopRatedMovies"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/olenastepaniuk/Developer-without-sync/JatApp/final/TopRatedMovies/TopRatedMovies/Common/UISearchBar+Extensions.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "392">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2E4FF543-9F38-45FD-84E2-D5AAD35D7AD8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TopRatedMovies/Common/UISearchBar+Extensions.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "isLoading"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "2E4FF543-9F38-45FD-84E2-D5AAD35D7AD8 - b0452a0b6dd7f672"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__C.UISearchBar.isLoading.setter : Swift.Bool"
+                  moduleName = "TopRatedMovies"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/olenastepaniuk/Developer-without-sync/JatApp/final/TopRatedMovies/TopRatedMovies/Common/UISearchBar+Extensions.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "780">
+               </Location>
+               <Location
+                  uuid = "2E4FF543-9F38-45FD-84E2-D5AAD35D7AD8 - b0452a0b6dd7f634"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__C.UISearchBar.isLoading.setter : Swift.Bool"
+                  moduleName = "TopRatedMovies"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/olenastepaniuk/Developer-without-sync/JatApp/final/TopRatedMovies/TopRatedMovies/Common/UISearchBar+Extensions.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "272">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

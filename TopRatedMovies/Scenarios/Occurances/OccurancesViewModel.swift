@@ -18,7 +18,7 @@ protocol OccurancesViewModelProtocol: AnyObject {
 final class OccurancesViewModel: OccurancesViewModelProtocol {
     
     var title: String {
-        "Occurances"
+        movieItem.title
     }
     
     weak var viewDelegate: ListViewStateDelegate?
