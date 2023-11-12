@@ -49,16 +49,10 @@ class OccurancesViewController: UIViewController {
         viewModel.viewDelegate = self
     }
     
-    private func configureView(withState state: ListViewState) {
+    private func configureView(with state: ListViewState) {
         switch state {
-        case .empty:
-            // TODO: create empty view
-            return
-        case .error(let error):
-            // TODO: create error view
-            return
-        case .populated:
-            reloadTableView()
+        case .populated: reloadTableView()
+        default: break
         }
     }
     
@@ -73,6 +67,6 @@ class OccurancesViewController: UIViewController {
 extension OccurancesViewController: ListViewStateDelegate {
     
     func viewStateDidChange(_ state: ListViewState) {
-        configureView(withState: state)
+        configureView(with: state)
     }
 }
