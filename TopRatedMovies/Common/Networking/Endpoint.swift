@@ -26,10 +26,6 @@ extension Endpoint {
         Environment.shared.baseURLString
     }
     
-    var apiKey: String {
-        Environment.shared.apiKey
-    }
-    
     var readAccessToken: String {
         Environment.shared.readAccessToken
     }

@@ -3,4 +3,54 @@
    uuid = "F293B0ED-A2E7-4BCF-9CCC-8E3CC5D36DFB"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "14CCE4D7-CD5B-4F34-8FB3-813150520F8C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TopRatedMovies/Core/Repository/MoviesRepository.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "getTopRatedMovies(page:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "14CCE4D7-CD5B-4F34-8FB3-813150520F8C - 95f5da14c1286c5f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TopRatedMovies.MovieRepository.getTopRatedMovies(page: Swift.Int, completion: (Swift.Result&lt;TopRatedMovies.MovieResult, TopRatedMovies.APIError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "TopRatedMovies"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/olenastepaniuk/Developer-without-sync/JatApp/final/TopRatedMovies/TopRatedMovies/Core/Repository/MoviesRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "240">
+               </Location>
+               <Location
+                  uuid = "14CCE4D7-CD5B-4F34-8FB3-813150520F8C - 19a180315376d431"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;TopRatedMovies.MovieResult, TopRatedMovies.APIError&gt;) -&gt; () in TopRatedMovies.MovieRepository.getTopRatedMovies(page: Swift.Int, completion: (Swift.Result&lt;TopRatedMovies.MovieResult, TopRatedMovies.APIError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "TopRatedMovies"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/olenastepaniuk/Developer-without-sync/JatApp/final/TopRatedMovies/TopRatedMovies/Core/Repository/MoviesRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "96">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

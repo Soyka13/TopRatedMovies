@@ -31,11 +31,8 @@ extension NSManagedObjectContext {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
         let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
         
-        do {
-            try execute(batchDeleteRequest)
-            try save()
-        } catch {
-            print("Error deleting data: \(error.localizedDescription)")
+        performChanges { [weak self] in
+           _ = try? self?.execute(batchDeleteRequest)
         }
     }
 }

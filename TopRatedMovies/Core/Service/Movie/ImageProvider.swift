@@ -14,7 +14,7 @@ enum ImageProvider {
 extension ImageProvider: Endpoint {
     
     var baseURL: String {
-        Environment.shared.regularImageBaseURLString
+        Environment.shared.imageBaseURLString
     }
     
     var path: String {
